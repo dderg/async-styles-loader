@@ -1,17 +1,17 @@
-function on(el, ev, callback) {
-  if (el.addEventListener) {
-    el.addEventListener(ev, callback, false);
-  } else if (el.attachEvent) {
-    el.attachEvent("on" + ev, callback);
-  }
-}
+
 function getStyleAsync(css_href,cacheName){
 	"use strict";
 	// once cached, the css file is stored on the client forever unless
 	// the URL below is changed. Any change will invalidate the cache
 	// a simple event handler wrapper
 	var head = document.getElementsByTagName('head')[0];
-
+  function on(el, ev, callback) {
+    if (el.addEventListener) {
+      el.addEventListener(ev, callback, false);
+    } else if (el.attachEvent) {
+      el.attachEvent("on" + ev, callback);
+    }
+  }
 
 	// if we have the fonts in localStorage or if we've cached them using the native batrowser cache
 	if ((window.localStorage && localStorage[cacheName]) || document.cookie.indexOf(cacheName) > -1){
