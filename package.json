@@ -1,6 +1,6 @@
 {
   "name": "async-styles-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "loads styles asyncronysly",
   "main": "async-style.js",
   "scripts": {

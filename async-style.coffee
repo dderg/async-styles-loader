@@ -81,6 +81,6 @@ getStyleAsync = (css_href, cacheName) ->
 
 getFont = (path, pathIE, ver)->
   if(document.all && !document.addEventListener)
-    getStyleAsync("#{pathIE}?ver=#{ver}", "fonts_ie8")
+    getStyleAsync("#{pathIE}?ver=#{ver}", path)
   else
-    getStyleAsync("#{path}?ver=#{ver}","fonts");
+    getStyleAsync("#{path}?ver=#{ver}", path);
